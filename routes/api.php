@@ -62,5 +62,15 @@ Route::post('/tenants', [ TestController::class,'postMethod' ]);
 // ROUTE APELLE PHOTO CONTROLLER FUNCTION STORE + PROTEGER MIDDLEWARE
 Route::post('/photos', [ PhotoController::class,'store' ]) ->middleware('App\Http\Middleware\PhotoMiddleware');
 
-
+// // ROUTE PARAMETRE DOSSIER .ENV
+// Route::get('/env',function(){
+//     return response() ->json([
+//         'connection' => env('DB_CONNECTION'),
+//         'host'       => env('DB_HOST'),
+//         'port'       => env('DB_PORT'),
+//         'database'   => env('DB_DATABASE'),
+//         'username'   => env('DB_USERNAME'),
+//         'password'   => env('DB_PASSWORD')
+//     ]);
+// });
 

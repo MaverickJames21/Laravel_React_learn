@@ -59,8 +59,8 @@ Route::post('/tenants', [ TestController::class,'postMethod' ]);
 // OLD SECOND WAY WRITING
 // Route::post('/tenants', 'TestController@postMethod');
 
-// ROUTE APELLE PHOTO CONTROLLER FUNCTION STORE
-Route::post('/photos', [ PhotoController::class,'store' ]);
+// ROUTE APELLE PHOTO CONTROLLER FUNCTION STORE + PROTEGER MIDDLEWARE
+Route::post('/photos', [ PhotoController::class,'store' ]) ->middleware('App\Http\Middleware\PhotoMiddleware');
 
 
 
